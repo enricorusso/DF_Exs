@@ -1,0 +1,4 @@
+dd if=/dev/sdc bs=512 conv=sync,noerror | tee image.dd | hashdeep -c md5,sha1 > image.src_hash
+2033664+0 records in
+2033664+0 records out
+1041235968 bytes (1,0 GB, 993 MiB) copied, 95,5931 s, 10,9 MB/s

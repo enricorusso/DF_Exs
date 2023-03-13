@@ -1,0 +1,6 @@
+%%%% HASHDEEP-1.0
+%%%% size,md5,sha1,filename
+## Invoked from: /home/enriquez/git/DF_Exs/acquisition
+## # hashdeep -c md5,sha1
+## 
+1041235968,446144a4af914d7e55603b6042f20db1,99540f5aaa170afbab722729e980fd6dc34ff323,stdin

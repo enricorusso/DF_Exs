@@ -1,0 +1,22 @@
+ATA device, with non-removable media
+Standards:
+	Likely used: 1
+Configuration:
+	head switch time > 15us
+	spindle motor control option
+	fixed drive
+	Logical		max	current
+	cylinders	5	0
+	heads		2560	0
+	sectors/track	36	0
+	--
+	Logical/Physical Sector size:           512 bytes
+	device size with M = 1024*1024:         225 MBytes
+	device size with M = 1000*1000:         235 MBytes (0 GB)
+	cache/buffer size  = unknown
+Capabilities:
+	IORDY not likely
+	Cannot perform double-word IO
+	R/W multiple sector transfer: not supported
+	DMA: not supported
+	PIO: pio0 
