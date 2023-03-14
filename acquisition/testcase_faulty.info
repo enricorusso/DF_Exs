@@ -1,0 +1,102 @@
+
+GUYMAGER ACQUISITION INFO FILE
+==============================
+
+Guymager
+========
+
+Version            : 0.8.13-1                                                                                 
+Version timestamp  : 2021-08-13-12.57.42 UTC                                                                  
+Compiled with      : gcc 11.2.0                                                                               
+libewf version     : 20140807 (not used as Guymager is configured to use its own EWF module)                  
+libguytools version: 2.1.0                                                                                    
+Host name          : springchickenz                                                                           
+Domain name        : (none)                                                                                   
+System             : Linux springchickenz 5.15.0-67-generic #74-Ubuntu SMP Wed Feb 22 14:14:39 UTC 2023 x86_64
+
+
+Device information
+==================
+Command executed: bash -c "search="`basename /dev/mapper/bad_disk`: H..t P.......d A..a de.....d" && dmesg | grep -A3 "$search" || echo "No kernel HPA messages for /dev/mapper/bad_disk""
+Information returned:
+----------------------------------------------------------------------------------------------------
+   No kernel HPA messages for /dev/mapper/bad_disk
+
+Command executed: bash -c "smartctl -s on /dev/mapper/bad_disk ; smartctl -a /dev/mapper/bad_disk"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+   Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   /dev/mapper/bad_disk: Unable to detect device type
+   Please specify device type with the -d option.
+   
+   Use smartctl -h to get a usage summary
+   
+   smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+   Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   /dev/mapper/bad_disk: Unable to detect device type
+   Please specify device type with the -d option.
+   
+   Use smartctl -h to get a usage summary
+
+Command executed: bash -c "hdparm -I /dev/mapper/bad_disk"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   /dev/mapper/bad_disk:
+
+Command executed: bash -c "CIDFILE=/sys/block/$(basename /dev/mapper/bad_disk)/device/cid; echo -n "CID: " ; if [ -e $CIDFILE ] ; then cat $CIDFILE  ; else echo "not available" ; fi "
+Information returned:
+----------------------------------------------------------------------------------------------------
+   CID: not available
+
+Hidden areas: unknown
+
+
+Acquisition
+===========
+
+Linux device            : /dev/mapper/bad_disk                                               
+Device size             : 1041235968 (1,0GB)                                                 
+Format                  : Expert Witness Format, sub-format Guymager - file extension is .Exx
+Image meta data         
+   Case number          : 1                                                                  
+   Evidence number      : 1234                                                               
+   Examiner             : Enrico Russo                                                       
+   Description          : my test case                                                       
+   Notes                :                                                                    
+Image path and file name: /tmp/mycase/testcase.Exx                                           
+Info  path and file name: /tmp/mycase/testcase.info                                          
+Hash calculation        : MD5 and SHA-1                                                      
+Source verification     : off                                                                
+Image verification      : on                                                                 
+
+During acquisition, 8 bad sectors have been encountered. They have been replaced by zeroed sectors. The sector numbers are:
+   8-15
+State: Finished successfully (with 8 bad sectors)
+
+MD5 hash                   : 446144a4af914d7e55603b6042f20db1        
+MD5 hash verified source   : --                                      
+MD5 hash verified image    : 446144a4af914d7e55603b6042f20db1        
+SHA1 hash                  : 99540f5aaa170afbab722729e980fd6dc34ff323
+SHA1 hash verified source  : --                                      
+SHA1 hash verified image   : 99540f5aaa170afbab722729e980fd6dc34ff323
+SHA256 hash                : --                                      
+SHA256 hash verified source: --                                      
+SHA256 hash verified image : --                                      
+Image verification OK. The image contains exactly the data that was written.
+
+Acquisition started : 2023-03-14 17:39:50 (ISO format YYYY-MM-DD HH:MM:SS)   
+Verification started: 2023-03-14 17:40:08                                    
+Ended               : 2023-03-14 17:40:13 (0 hours, 0 minutes and 23 seconds)
+Acquisition speed   : 55.17 MByte/s (0 hours, 0 minutes and 18 seconds)      
+Verification speed  : 248.25 MByte/s (0 hours, 0 minutes and 4 seconds)      
+
+
+Generated image files and their MD5 hashes
+==========================================
+
+No MD5 hashes available (configuration parameter CalcImageFileMD5 is off)
+MD5                               Image file
+n/a                               testcase.E01
